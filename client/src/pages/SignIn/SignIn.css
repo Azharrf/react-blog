@@ -1,0 +1,59 @@
+.signin {
+  height: calc(100vh - 50px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+      rgba(209, 209, 209, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("https://images.pexels.com/photos/1007026/pexels-photo-1007026.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-size: cover;
+  background-position: center;
+}
+
+.signinTitle {
+  font-size: 50px;
+}
+
+.signinForm {
+  width: 250px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.signinForm > label {
+  margin: 10px 0;
+}
+
+.signinInput {
+  padding: 10px;
+  background-color: white;
+  border: none;
+}
+
+.signinLogin {
+  margin-top: 20px !important;
+  cursor: pointer;
+  background-color: lightcoral;
+  border: none;
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.signinRegis {
+  /* position: absolute;
+  top: 60px;
+  right: 20px; */
+  background-color: teal;
+  cursor: pointer;
+  border: none;
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+  width: 250px;
+  margin-top: 10px !important;
+}
