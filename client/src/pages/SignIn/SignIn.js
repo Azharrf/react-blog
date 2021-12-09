@@ -6,8 +6,8 @@ import './SignIn.css';
 
 export default function SignIn() {
     const userRef = useRef();
-    const passwordRef = useRef()
-    const { user, dispatch } = useContext(Context);
+    const passwordRef = useRef();
+    const { dispatch, isFetching } = useContext(Context);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -23,31 +23,34 @@ export default function SignIn() {
         }
     };
 
-    console.log(user)
 
     return (
         <div className="signin">
-            <span className="signinTitle">Sign In</span>
+            <span className="signinTitle">signin</span>
             <form className="signinForm" onSubmit={handleSubmit}>
                 <label>Username</label>
-                <input 
-                    type="text" 
-                    placeholder="Jhondoe" 
+                <input
+                    type="text"
                     className="signinInput"
-                    ref={ userRef }
+                    placeholder="Enter your username..."
+                    ref={userRef}
                 />
                 <label>Password</label>
-                <input 
-                    type="password" 
-                    placeholder="Enter your password" 
+                <input
+                    type="password"
                     className="signinInput"
-                    ref={ passwordRef }
+                    placeholder="Enter your password..."
+                    ref={passwordRef}
                 />
-                <button className="signinLogin" type="submit">Sign In</button>
+                <button className="signinLogin" type="submit" disabled={isFetching}>
+                    SignIn
+                </button>
             </form>
             <button className="signinRegis">
-                <Link to="/signup">Sign Up</Link>
+                <Link className="link" to="/register">
+                    SignUp
+                </Link>
             </button>
         </div>
-    )
+    );
 }
